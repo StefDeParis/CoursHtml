@@ -1,0 +1,171 @@
+/*
+@font-face {
+    font-family: mySignature ;
+    src: url("../fonts/Winterland.ttf");
+}
+*/
+/*
+body {
+    font-family: 'mySignature';
+    background: linear-gradient(to top left, blue, white);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+*/
+.entete {
+    background-color:cadetblue;
+    text-align: center;
+}
+
+.adresse {
+    text-align: right;   
+    padding-right: 30px;
+}
+
+h2 {
+    background-color:cadetblue;
+    text-align: left;
+}
+
+h3 {
+    display: inline-block;
+}
+
+.navbar ul{
+    list-style-type: fixed;
+    width: 100%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+
+
+.navbar-item{
+   float: left; 
+}
+
+.navbar-item a{
+    display: block;
+    color: cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar-item a:hover{
+    background-color: darkgrey;
+}
+.active {
+    background-color: darkblue;
+}
+.container {
+    display: block;
+    margin: 65px;
+}
+
+.footer {
+    background-color: cadetblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 50px;
+    height: 50px;
+}
+
+.footer p {
+    color: darkred;
+    text-align: center;
+}
+
+p.rouge {
+    color: red;
+}
+
+.vert {
+    color: green;
+}
+
+.gradient-vertical
+{
+width:400px;
+height: 200px;
+background: -ms-linear-gradient(bottom, red, blue);
+background: -moz-linear-gradient(bottom, red, blue);
+background: -webkit-linear-gradient(top left, red, blue);
+}
+
+/*
+.un
+{
+border: 1px solid #ff0000;
+margin: 10px;
+padding: 10px;
+}
+.deux
+{
+border: 1px solid #00ff00;
+margin: 2px;
+padding: 2px;
+}
+.trois
+{
+border: 1px solid #0000ff;
+margin: 10px;
+padding: 10px;
+}
+
+.un
+{
+border: 1px solid #ff0000;
+margin: 10px;
+padding: 10px;
+}
+.deux
+{
+border: 1px solid #00ff00;
+margin: 2px;
+padding: 2px;
+}
+.trois
+{
+border: 1px solid #0000ff;
+margin: 10px;
+padding: 10px;
+}
+
+
+p {
+display:inline-block;
+text-align:left;
+background:#dce;
+width:150px;
+padding:20px;
+margin: 20px;
+}
+*/
+
+header, article, footer, aside {
+    display: block;
+    }
+    header {
+    background-color: red;
+    }
+
+    article {
+    height: 300px;
+    float: left;
+    background-color: #66FFFF;
+    width:80%;
+    }
+
+    aside {
+    height: 300px;
+    float:right;
+    width:20%;
+    background-color:yellow;
+    }
+    
+    footer {
+    clear: both;
+    background-color: #99FF66;
+    }

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="file.js"></script>
+
+    </script>
+
+</head>
+
+<body>
+    <!-- <button onclick="alert('Hello World');"> Cliquer ici</button><br>
+    <button onclick="maFonction()"> Faut que ça clique ou que ça claque</button><br>
+    <button onclick="saisirNom()"> Clique là</button><br> -->
+    <!-- <button onclick="nombresPairs()"> Nombres pairs</button><br> -->
+
+    <button onclick="ajoutNom()">Ajout nom</button>
+    <button onclick="tirageNom()">Tirage nom</button><br><br><br>
+
+    <!-- <form action="" method="get" class="calculette"> -->
+        <input type="number" id="nombre1" name="nombre1" min="10" max="100">
+        <input type="number" id="nombre2" name="nombre2" min="10" max="100"><br>
+
+        <button onclick="addition()">+</button>
+        <button onclick="soustraction()">-</button>
+        <button onclick="multiplication()">x</button>
+        <button onclick="division()">/</button><br>
+        Résultat:<br>
+        <textarea id="resultat">
+       0</textarea>
+    <!-- </form> -->
+
+    <script>
+        // Définir en JavaScript un tableau contenant des notes d'étudiants comprises entre 0 et 20.
+        //     Implémenter en JavaScript les fonctions qui permettent d'afficher un tel tableau, de savoir combien d'étudiants ont eu 10 plus, 
+        //     de calculer la moyenne des notes, de connaître la note maximale, de rechercher une note particulière
+        /* Affiche le contenu d'un tableau en HTML */
+        function afficheTableau(t) {
+            document.writeln('<p>Tableau</p>');
+
+            document.writeln('<table border="1"><tr>');
+            for (var i = 0; i < t.length; i++) {
+                document.writeln('<td>' + t[i] + '</td>');
+            }
+            document.writeln('</tr></table>');
+        }
+        /* Calcule et affiche la moyenne des éléments d'un tableau */
+        function afficheMoyenne(t) {
+            var sigma = 0;
+            for (var i = 0; i < t.length; i++) {
+                sigma += t[i];
+
+            }
+            document.writeln('Moy.= ' + sigma / t.length);
+        }
+        /* Compte et affiche le nombre d'apparitions d'un élément dans un tableau */
+        function occurrences(x, t) {
+        }
+        /* Compte et affiche combien ont eu 10 ou plus */
+        function ontEuLaMoyenne(t) {
+        }
+        /* Indique si un élément est présent dans un tableau ou non */
+        function recherche(x, t) {
+            var present = false;
+            for (var i = 0; i < t.length; i++) {
+                if (t[i] == x) {
+                    present = true;
+                    break;
+                }
+            }
+            present ? document.writeln('<p>', x, ' est présent.</p>') : document.writeln('<p>', x, ' n\'est pas présent.</p>');
+        }
+
+        //   Exercice 1
+        function displayCurrentDateTime() {
+            var today = new Date();
+            // var h = today.getHours();
+            document.writeln('<p>TODAY: ' + today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear() + ' ' + today.getHours() + ':' + + today.getMinutes() + '<p>');
+        }
+        displayCurrentDateTime();
+
+        //Exercice 2 Q1
+        function f2(arr) {
+            return arr[0];
+        }
+        var daylist = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+        var r = f2(daylist);
+        console.log(r);
+        document.writeln(r);
+
+
+        //Exercise 2 Q2
+        function minToSec(min) {
+            return min * 60;
+        }
+        var sec = minToSec(100);
+        document.writeln('<p>Nb sec.: ' + sec + '</p>')
+
+        //Exercice 2 Q3
+        function ageEnJour(age) {
+            return age * 365;
+        }
+        var jours = ageEnJour(2)
+        document.writeln('<p>Age en jours: ' + jours + '</p>')
+
+        //Exercice 3 Q1
+        var nombre = 5;
+        var phrase = "ma phrase";
+
+        document.writeln('<p>Nombre: ' + nombre + ', phrase: ' + phrase + '</p>')
+
+        //Exercice 3 Q2
+        var temp = -5
+        function seuilTemp(temperature) {
+            if (temperature > 10) {
+                document.writeln('<p>Température > à 10°C');
+            } else {
+                document.writeln('<p>Température < à 10°C');
+            }
+        }
+        seuilTemp(temp);
+
+        //Exercice 3 Q3
+        function tantQue() {
+            document.writeln('<p>Boucle while<p>');
+            var i = 0;
+            while (i < 100) {
+                document.write(i + ' ');
+                i++;
+            }
+        }
+        tantQue();
+
+        function pour() {
+            document.writeln('<p>Boucle for<p>');
+            for (var i = 0; i < 100; i++) {
+                document.write(i + ' ');
+            }
+        }
+        pour();
+
+        //Exercice 4
+        function itere() {
+            document.writeln('<p>Itération<p>');
+            for (var i = 0; i < 100; i++) {
+                if (i % 5 == 0 && i % 3 != 0) {
+                    document.write('Fizz, ');
+                } else if (i % 3 == 0 && i % 5 != 0) {
+                    document.write('Buzz, ');
+                } else if (i % 3 == 0 && i % 5 == 0) {
+                    document.write('FizzBuzz, ');
+                }
+                else {
+                    document.write(i + ', ');
+                }
+            }
+        }
+        itere();
+
+        //Exercice 5
+        var tabInt = [1, 2, 3, 4];
+        function sigmaProduitTab(t) {
+            var sigma = 0;
+            var produit = 1;
+            for (var i = 0; i < t.length; i++) {
+                sigma += t[i];
+                produit *= t[i];
+            }
+            //return sigma;
+            document.writeln('<p>Sigma de tab.: ' + sigma + '<p>');
+            document.writeln('<p>Produit de tab.: ' + produit + '<p>');
+        }
+        sigmaProduitTab(tabInt)
+
+        //Exercice 6
+        function pair() {
+            document.writeln('<p>Itération<p>');
+            for (var i = 0; i <= 15; i++) {
+                if (i % 2 == 0) {
+                    document.write(i + ' est pair, ');
+                } else {
+                    document.write(i + ' impair, ');
+                }
+            }
+        }
+        pair();
+
+        //Exercice 7
+        var tabNoms = [];
+
+        function ajoutNom() {
+            var nom = prompt('Quel est votre nom ?');
+            tabNoms.push(nom);
+        }
+
+        function tirageNom() {
+            var nomTire = tabNoms[Math.floor(Math.random() * tabNoms.length)];
+            //document.writeln('<p>Tirage noms: ' + nomTire + '<p>');
+            //document.body.innerHTML = "<p>Tirage du nom: " + nomTire + "<p>";
+                alert(nomTire);
+        }
+
+        //Exercice 8
+        function addition() {
+            var res = parseInt(document.getElementById('nombre1').value) +
+                parseInt(document.getElementById('nombre2').value);
+            document.getElementById('resultat').value =
+                document.getElementById("nombre1").value + ' + ' +
+                document.getElementById("nombre2").value + ' = ' + res;
+        }
+
+        function soustraction() {
+            var res = parseInt(document.getElementById('nombre1').value) -
+                parseInt(document.getElementById('nombre2').value);
+            document.getElementById('resultat').value =
+                document.getElementById("nombre1").value + ' - ' +
+                document.getElementById("nombre2").value + ' = ' + res;
+        }
+
+        function multiplication() {
+            var res = parseInt(document.getElementById('nombre1').value) *
+                parseInt(document.getElementById('nombre2').value);
+            document.getElementById('resultat').value =
+                document.getElementById("nombre1").value + ' x ' +
+                document.getElementById("nombre2").value + ' = ' + res;
+        }
+
+        function division() {
+            var res = parseInt(document.getElementById('nombre1').value) /
+                parseInt(document.getElementById('nombre2').value);
+            document.getElementById('resultat').value =
+                document.getElementById("nombre1").value + ' / ' +
+                document.getElementById("nombre2").value + ' = ' + res;
+        }
+
+
+        /* appels aux procédures définies ci-dessus */
+        var notes = [5, 12, 8, 20, 10];
+        notes[2] = 9;
+        afficheTableau(notes);
+        afficheMoyenne(notes);
+        occurrences(12, notes);
+        occurrences(2, notes);
+        ontEuLaMoyenne(notes);
+        recherche(12, notes);
+        recherche(2, notes);
+
+    </script>
+
+</body>
+</body>
+
+</html>

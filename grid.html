@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div class="premier">1</div>
+        <div class="second">2</div>
+        <div class="troisieme">3</div>
+        <div class="quatrieme">4</div>
+        <div class="cinquieme">5</div>
+        <div class="sixieme">6</div>
+    </div>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .premier {
+            grid-column: 1;
+            grid-row: 1;
+            background-color: blueviolet;
+        }
+        .second {
+            grid-column: 2;
+            grid-row: 1;
+            background-color:brown;
+        }
+        .troisieme {
+            grid-column: 1;
+            grid-row: 2;
+            background-color:beige;
+        }
+        .quatrieme {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: yellow;
+        }
+        .cinquieme {
+            grid-column: 1;
+            grid-row: 3;
+            background-color: red;
+        }
+        .sixieme {
+            grid-column: 2;
+            grid-row: 3;
+            background-color: green;
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form method="post" action="mailto:stefofparis@yahoo.fr">
+        <label for="nom">Entrez votre nom: </label>
+        <input type="text" size="15" maxlength="40" name="Nom" placeholder="Entrer votre nom"/><br />
+        <label for="nom">Entrez votre prénom: </label>
+        <input type="text" size="15" maxlength="40" name=prenom" placeholder="Entrer votre prénom"/><br />
+        <label for="nom">Entrez votre e-mail: </label>
+        <input type="text" size="20" maxlength="40" name=email"
+            placeholder="Entrer votre email" /><br />
+
+        <input type="radio" id="oui" name="ouiNon" value="Oui" checked>
+        <label for="oui">Oui</label>
+        <input type="radio" id="non" name="ouiNon" value="Non">
+        <label for="non">Non</label><br>
+        <tr>
+            <td>
+                <input type="submit" value="Envoyer">
+            </td>
+            &emsp;
+            <td>
+                <input type="reset" value="Annuler">
+            </td>
+        </tr>
+
+    </form>
+
+</body>
+
+</html>

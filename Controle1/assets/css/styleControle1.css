@@ -1,0 +1,147 @@
+
+/* Accueil */
+.haut {
+    display: block;
+    background-color: lightblue;
+}
+
+.haut-gauche {
+    float: left;
+    width: 50%;
+    background-color:lightpink;
+}
+
+.haut-droit {
+    float: right;
+    width: 50%;
+    background-color:lightsalmon;
+}
+
+.haut-bas {
+    background-color:lightskyblue;
+    display: block;
+    float: bottom;
+    width: 100%;
+}
+
+.millieu {
+    display: block;
+    background-color: lightgray;
+}
+
+.bas {
+    display: block;
+    background-color: lightgreen;
+}
+
+.millieu-gauche {
+    float: left;
+    width: 50%;
+    background-color:lightpink;
+}
+
+.millieu-droit {
+    float: right;
+    width: 50%;
+    background-color:lightsalmon;
+}
+
+.millieu-gaucheL2 {
+    float: left;
+    width: 50%;
+    background-color:lightyellow;
+}
+
+.millieu-droitL2 {
+    float: right;
+    width: 50%;
+    background-color:lightseagreen;
+}
+
+table {
+    border: 1px solid black;
+  }
+
+p {
+    padding-right: 10px;
+}
+
+.block {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: grey
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+}
+.premier {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: blueviolet;
+}
+.second {
+    grid-column: 2;
+    grid-row: 1;
+    background-color:brown;
+}
+.troisieme {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: greenyellow;
+}
+.quatrieme {
+    grid-column: 4;
+    grid-row: 1;
+    background-color: yellow;
+}
+
+
+/* mon CV */
+.entete {
+    background-color:cadetblue;
+    text-align: center;
+}
+
+.adresse {
+    text-align: right;   
+    padding-right: 30px;
+}
+
+img { 
+    float: left;  
+    margin: 5px; 
+} 
+
+h2 {
+    background-color:cadetblue;
+    padding-right: 10px;
+    /* text-align: left; */
+}
+
+h3 {
+    /* display: inline-block; */
+    text-align: right;
+    padding-right: 10px;
+}
+
+h4 {
+    /* display: inline-block; */
+    text-align: center;
+}
+
+.navbar ul{
+    list-style-type: fixed;
+    width: 100%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: cadetblue;
+}
